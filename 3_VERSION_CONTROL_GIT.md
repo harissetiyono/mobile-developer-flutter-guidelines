@@ -14,6 +14,8 @@
 - Optionally, include a more detailed description of the changes in the commit body, wrapped at 72 characters per line.
 - Reference any relevant issue or task numbers in the commit message (e.g., "Fix #123").
 
+DO:
+
 ## Branching Strategy
 
 **Purpose:**
