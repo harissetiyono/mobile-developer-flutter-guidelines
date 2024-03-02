@@ -35,5 +35,3 @@
 - Implement efficient network protocols, such as HTTP/2 or WebSocket, to minimize request/response overhead, reduce latency, and enable multiplexing and server push capabilities.
 - Optimize network requests by batching multiple requests, compressing payloads, and caching responses to minimize bandwidth usage and reduce server load.
 - Handle network errors and timeouts gracefully, implement retry mechanisms, and provide feedback to users to mitigate connectivity issues and ensure robustness in adverse network conditions.
-
-<p align="center">will be updated regularly 🔥</p>

@@ -38,5 +38,3 @@ When setting up a new Flutter project, follow these guidelines to ensure consist
 **Run the App:** Test your project setup by running the app on an emulator or physical device. Use the `flutter run` command to launch the app and verify that everything is working as expected.
 
 By following these setup guidelines, you can establish a consistent and organized development environment for your Flutter projects.
-
-<p align="center">will be updated regularly 🔥</p>

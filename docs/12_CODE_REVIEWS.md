@@ -43,5 +43,3 @@
 - Provide context for your feedback, explaining the rationale behind your suggestions and highlighting the impact of proposed changes on code readability, maintainability, and functionality.
 - Encourage dialogue and collaboration by soliciting input from the author, seeking clarification on design decisions, and discussing alternative approaches to problem-solving.
 - Be open to receiving feedback on your feedback, accepting constructive criticism, and adapting your communication style to better meet the needs of the team.
-
-<p align="center">will be updated regularly 🔥</p>

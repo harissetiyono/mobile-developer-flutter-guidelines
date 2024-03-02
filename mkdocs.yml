@@ -1,0 +1,42 @@
+site_name: Mobile Developer Flutter Guidelines
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - 1. Introduction: index.md
+  - 2. Development Env Setup: 2_DEVELOPMENT_ENVIRONMENT_SETUP.md
+  - 3. Version Control (Git): 3_VERSION_CONTROL_GIT.md
+  - 4. Coding standarts: 4_CODING_STANDARTS.md
+  - 5. Documentation: 5_DOCUMENTATION.md
+  - 6. Testing: 6_TESTING.md
+  - 7. Dependency Management: 7_DEPENDENCY_MANAGEMENT.md
+  - 8. Security: 8_SECURITY.md
+  - 9. Performance Optimization: 9_PERFORMANCE_OPTIMIZATION.md
+  - 10. CI/CD: 10_CI_CD.md
+  - 11. Collaboration: 11_COLLABORATION_AND_COMMUNICATION.md
+  - 12. Code Reviews: 12_CODE_REVIEWS.md
+  - 13. Publishing Guidelines: 13_PUBLISHING_GUIDELINES.md
+  - 14. Maintenance and Support: 14_MAINTENANCE_AND_SUPPORT.md

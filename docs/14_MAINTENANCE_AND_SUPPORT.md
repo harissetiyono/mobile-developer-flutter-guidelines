@@ -46,5 +46,3 @@
 - Allocate resources, including personnel, budget, and infrastructure, to support long-term maintenance activities, such as software development, testing, deployment, monitoring, and customer support.
 - Monitor and analyze application usage metrics, performance indicators, and user feedback regularly to identify emerging trends, patterns, and areas for improvement, informing long-term support planning and decision-making.
 - Stay informed about relevant technologies, frameworks, and tools that impact Flutter development and maintenance, proactively adapting and evolving your long-term support strategies to leverage new opportunities and address emerging challenges.
-
-<p align="center">will be updated regularly 🔥</p>

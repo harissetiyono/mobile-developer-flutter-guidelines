@@ -43,5 +43,3 @@
 - Follow the technical requirements and recommendations for app packaging, signing, and distribution, including APK/IPA generation, metadata configuration, and compliance with security and privacy standards.
 - Provide accurate and up-to-date information for app listings, including app title, description, screenshots, and promotional assets, following the platform's guidelines for formatting, localization, and promotional content.
 - Stay informed about updates, changes, and announcements from Google Play Store and Apple App Store regarding policy changes, enforcement actions, and new features, ensuring ongoing compliance and optimization of app listings for visibility and engagement.
-
-<p align="center">will be updated regularly 🔥</p>

@@ -35,5 +35,3 @@
 - Follow Semantic Versioning (SemVer) principles to assign version numbers based on backward compatibility, breaking changes, and feature additions.
 - Increment the major version for backward-incompatible changes, the minor version for backward-compatible feature additions, and the patch version for backward-compatible bug fixes.
 - Use version constraints in the pubspec.yaml file to specify acceptable ranges of dependency versions, ensuring compatibility while allowing for updates.
-
-<p align="center">will be updated regularly 🔥</p>

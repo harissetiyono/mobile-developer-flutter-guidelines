@@ -49,5 +49,3 @@
 - Follow Flutter's widget composition principles to build complex UIs from simple, composable components.
 - Implement state management patterns (e.g., Provider, Bloc) to manage application state and data flow effectively.
 - Handle errors and exceptions gracefully to provide a robust and resilient user experience.
-
-<p align="center">will be updated regularly 🔥</p>

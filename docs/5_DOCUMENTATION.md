@@ -41,5 +41,3 @@
 - Document each API endpoint, class, method, or function, including its purpose, parameters, return values, and usage examples.
 - Provide clear and concise explanations of any request or response payloads, query parameters, headers, or authentication mechanisms.
 - Use consistent formatting, syntax highlighting, and organization to make the documentation easy to read and navigate.
-
-<p align="center">will be updated regularly 🔥</p>

@@ -35,5 +35,3 @@
 - Use strong authentication methods, such as multi-factor authentication (MFA) and OAuth, to verify the identity of users and protect against unauthorized access.
 - Implement role-based access control (RBAC) or attribute-based access control (ABAC) to enforce fine-grained access policies and permissions based on user roles, attributes, or group memberships.
 - Regularly review and audit access controls, authentication mechanisms, and authorization policies to identify and remediate security vulnerabilities, misconfigurations, and compliance gaps.
-
-<p align="center">will be updated regularly 🔥</p>

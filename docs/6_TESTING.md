@@ -38,5 +38,3 @@
 - Use Flutter's integration testing framework (e.g., `flutter_driver`) to automate user interactions, navigate through screens, and verify system behavior.
 - Set up test environments and configurations to simulate real-world conditions, such as network connectivity, device orientation, and device hardware.
 - Integrate integration tests into the CI/CD pipeline to automate testing and ensure consistent test coverage across different environments.
-
-<p align="center">will be updated regularly 🔥</p>

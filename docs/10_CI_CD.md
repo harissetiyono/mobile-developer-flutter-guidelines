@@ -1,4 +1,4 @@
-# 13. Continuous Integration/Continuous Deployment (CI/CD)
+# 10. Continuous Integration/Continuous Deployment (CI/CD)
 
 ## CI/CD Setup Instructions
 
@@ -12,5 +12,3 @@
 - Configure CI/CD pipelines to trigger automatically on code commits or pull requests, ensuring that changes are validated and integrated into the codebase promptly.
 - Define stages in the CI/CD pipeline, including build, test, code analysis, and deployment, to orchestrate the sequence of actions performed on each code change.
 - Configure environment variables, secrets, and permissions securely to protect sensitive information and ensure that only authorized users or processes can access critical resources.
-
-<p align="center">will be updated regularly 🔥</p>

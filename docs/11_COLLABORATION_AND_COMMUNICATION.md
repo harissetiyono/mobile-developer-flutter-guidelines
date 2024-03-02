@@ -35,5 +35,3 @@
 - Use project management tools and platforms, such as Jira, Trello, or Asana, to create tasks, assign them to team members, and track their progress throughout the sprint or project lifecycle.
 - Define clear ownership and responsibilities for each task or user story, specifying the primary assignee, collaborators, and stakeholders involved in its completion.
 - Regularly update task status, provide status reports, and communicate progress to the team during daily stand-up meetings or asynchronous updates, ensuring transparency and alignment on project goals and priorities.
-
-<p align="center">will be updated regularly 🔥</p>

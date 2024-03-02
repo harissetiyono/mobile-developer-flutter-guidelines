@@ -14,6 +14,8 @@
 - Optionally, include a more detailed description of the changes in the commit body, wrapped at 72 characters per line.
 - Reference any relevant issue or task numbers in the commit message (e.g., "Fix #123").
 
+DO:
+
 ## Branching Strategy
 
 **Purpose:**
@@ -65,5 +67,3 @@ After receiving approval from reviewers and resolving any discussions, merge the
 Periodically, create release branches from the `develop` branch to prepare release candidates for production deployment.
 
 By following these version control guidelines and workflow practices, the team can collaborate effectively, maintain code quality, and ensure smooth integration of changes into the codebase.
-
-<p align="center">will be updated regularly 🔥</p>
