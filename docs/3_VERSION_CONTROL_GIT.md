@@ -8,13 +8,113 @@
 
 **Guidelines:**
 
-- Follow the conventional commit format (e.g., [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)) to structure commit messages.
-- Start the commit message with a concise, imperative verb in the present tense (e.g., "Add", "Fix", "Update").
-- Provide a brief summary of the changes in the commit subject line (50 characters or less).
-- Optionally, include a more detailed description of the changes in the commit body, wrapped at 72 characters per line.
-- Reference any relevant issue or task numbers in the commit message (e.g., "Fix #123").
+These guidelines outline best practices for writing git commit messages. Consistent and informative commit messages help maintain a clean and understandable version history, making it easier to track changes and collaborate effectively.
 
-DO:
+### DO
+
+- **Use Imperative Mood:** Write commit messages in the imperative mood.
+- **Be Descriptive:** Provide a clear and concise description of the changes introduced by the commit.
+- **Include Issue References:** If applicable, reference related issues, tasks, or feature requests in the commit message.
+
+### DON'T
+
+- **Avoid Vague Messages:** Refrain from using vague or ambiguous commit messages that do not provide meaningful context about the changes.
+- **Don't Use Personal Pronouns:** Avoid using personal pronouns like "I" or "we" in commit messages.
+
+### PREFER
+
+- **Prefix Commit Messages:** Prefix commit messages with a relevant type identifier, such as "feat", "fix", "chore", etc., to categorize the type of change being made.
+- **Use Conventional Commit Format:** Prefer using the conventional commit format, as defined by [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), to structure commit messages consistently across projects.
+
+### AVOID
+
+- **Avoid Excessive Detail:** Refrain from including excessive detail or technical jargon in commit messages, as it can clutter the version history.
+- **Avoid Incomplete Messages:** Avoid committing incomplete or work-in-progress changes without providing context or explanation.
+
+### CONSIDER
+
+- **Consider Breaking Changes:** If a commit introduces breaking changes, consider explicitly mentioning them in the commit message to alert other developers.
+- **Consider Scope:** When appropriate, include a scope identifier in the commit message to indicate the specific component or module affected by the changes.
+
+### Examples for Each Commit Type
+
+The commit message should be structured as follows:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+ref: <https://www.conventionalcommits.org/en/v1.0.0/#summary>
+
+---
+**feat (Feature)**: Introduces a new feature or functionality to the project.
+
+- `feat: Add user authentication feature`
+- `feat(auth): Add user authentication by google feature`
+
+---
+**fix (Bug Fix)**: Addresses and resolves an issue or bug within the project.
+
+- `fix: Resolve issue with incorrect user permissions`
+- `fix(permission): Resolve issue with incorrect user permissions`
+
+---
+**docs (Documentation)**: Updates or adds documentation, such as README files, comments, or inline documentation.
+
+- `docs: Update README with installation instructions`
+- `docs(readme): Update README with installation instructions`
+
+---
+**style (Code Style)** Implements changes related to code style, formatting, or whitespace.
+
+- `style: Format code according to style guide`
+- `style(format): Format code according to style guide`
+
+---
+**refactor (Code Refactor)**: Restructures existing code without changing its external behavior.
+
+- `refactor: Simplify login component logic`
+- `refactor(login): Simplify component logic`
+
+---
+**test (Tests)**: Adds, updates, or fixes tests related to the project's codebase.
+
+- `test: Add unit tests for user registration`
+- `test(registration): Add unit tests for user registration`
+
+---
+**chore (Chores)**: Implements miscellaneous tasks or changes that do not fit into any other category.
+
+- `chore: Update dependencies to latest versions`
+- `chore(deps): Update to latest versions`
+
+---
+**struct (Folder Structure)**: Adjusts or refactors the project's folder structure for better organization and readability.
+
+- `struct: Reorganize project structure for improved readability`
+- `struct(assets): Reorganize assets structure for improved readability`
+
+---
+**update (Updates)**: Updates dependencies, libraries, or other external resources used by the project.
+
+- `update: Update library version to latest release`
+- `update(library): Update version to latest release`
+
+---
+**enhance (Enhancements)**: Enhances or improves existing functionality or performance.
+
+- `enhance: Improve performance of search algorithm`
+- `enhance(search): Improve performance of search algorithm`
+
+---
+**revert (Reverts)**: Reverts a previous commit to undo changes that caused issues or unintended consequences.
+
+- `revert: Revert previous commit that caused issue #123`
+- `revert(issue123): Revert previous commit that caused issue #123`
 
 ## Branching Strategy
 
