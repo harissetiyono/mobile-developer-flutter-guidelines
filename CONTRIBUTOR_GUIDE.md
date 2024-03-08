@@ -27,4 +27,4 @@ Thank you for your interest in contributing to our project! Pull requests (PRs) 
 
 4. **Keep Commits Atomic:** Commit your changes in logical, clear and descriptive.
 
-5. Make [Submit Pull Request](./docs/3_VERSION_CONTROL_GIT.md#submitting-a-pull-request)
+5. Make [Pull Request](.github/PULL_REQUEST_TEMPLATE.md)
