@@ -214,6 +214,58 @@ Reference: <https://nvie.com/posts/a-successful-git-branching-model/>
 - Assign reviewers to the PR based on their expertise and involvement in the affected code.
 - Address any review comments and ensure that the PR meets the project's coding standards, test coverage requirements, and acceptance criteria before merging.
 
+### Submitting a Pull Request
+
+1. **Pull Latest Changes:** Before submitting a pull request, pull the latest changes from the upstream repository to ensure your branch is up-to-date:
+
+    `git pull origin main`
+
+2. **Push Changes:** Once you're satisfied with your changes, push your branch to your forked repository:
+
+    `git push origin feature/your-feature-name`
+
+3. **Create Pull Request:** Go to the GitHub page of your forked repository and create a new pull request from your branch to the main branch of the upstream repository.
+
+4. **Pull Request Description:**
+
+- **Overview:** Provide a brief overview of the changes introduced by your pull request.
+- **Checklist:** Include a checklist of tasks completed, such as testing, documentation updates, etc.
+- **Related Issues:** If your pull request addresses any specific issues, reference them here.
+- **Additional Notes:** Any additional information or context relevant to the pull request.
+
+5. **Review and Address Feedback:** Be responsive to any feedback or review comments provided on your pull request. Make necessary adjustments based on the feedback received.
+
+### Additional Tips
+
+- **Keep Pull Requests Small:** Try to keep your pull requests focused on a single issue or feature to make the review process more manageable.
+
+- **Follow Coding Guidelines:** Ensure your code follows the coding style and guidelines established for the project.
+
+- **Write Tests:** Whenever possible, include tests for your changes to maintain code quality and prevent regressions.
+
+- **Be Patient:** Understand that pull requests may take time to review and merge. Be patient and respectful throughout the process.
+
+## Pull Request Example Template
+
+### **Overview**
+
+This pull request introduces a new feature to the project that allows users to filter search results based on location. It includes updates to the search functionality and UI components to support this feature.
+
+### **Checklist**
+
+- [x]  Implemented search filtering by location
+- [x]  Added UI components for location selection
+- [x]  Updated documentation with usage instructions for the new feature
+- [x]  Conducted thorough testing to ensure functionality and compatibility
+
+### **Related Issues**
+
+Closes #123
+
+### **Additional Notes**
+
+This feature enhances the user experience by providing more targeted search results based on user-specified locations. It is designed to be intuitive and seamless, integrating smoothly with the existing search functionality.
+
 ## Git Workflow Overview
 
 The team follows a Git workflow based on feature branching and pull requests to manage code changes efficiently. The typical workflow consists of the following steps:
