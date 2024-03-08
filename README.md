@@ -111,3 +111,20 @@
 - [Summary](/docs/15_CONCLISION.md#summary)
 - [Acknowledgments](/docs/15_CONCLISION.md#acknowledgments)
 - [Revision History](/docs/15_CONCLISION.md#revision-history)
+
+## Community and contributing
+
+We believe that collaboration and contributions from the community are essential for the success and growth of our project. Whether you're a developer, designer, tester, or enthusiast, there are many ways to get involved and contribute to our project.
+
+How to Contribute
+Help us improve our project by submitting code contributions. You add new guidelines, or enhance existing guidelines. Fork the repository, make your changes, and submit a pull request for review.
+
+Feedback and Suggestions: Your feedback and suggestions help us understand the needs and preferences of our community. Share your thoughts, ideas, and suggestions for improving the project through discussions, forums, or issue trackers.
+
+Code of Conduct
+We expect all members of our community to adhere to our Code of Conduct, which outlines our expectations for respectful and inclusive behavior. By participating in our community, you agree to uphold these standards and contribute to a positive and welcoming environment for everyone.
+
+Get Started
+Ready to contribute? Check out our [Contributing Guidelines](CONTRIBUTOR_GUIDE.md) to learn more about how you can get involved. Whether you're a seasoned developer or new to open source, there's a place for you in our community.
+
+Thank you for considering contributing to our project. Together, we can make a difference and create something amazing!
