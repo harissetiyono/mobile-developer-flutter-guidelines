@@ -1,0 +1,1419 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2_DEVELOPMENT_ENVIRONMENT_SETUP/">
+      
+      
+        <link rel="next" href="../4_CODING_STANDARTS/">
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>3. Version Control (Git) - Mobile Developer Flutter Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-version-control-git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mobile Developer Flutter Guidelines" class="md-header__button md-logo" aria-label="Mobile Developer Flutter Guidelines" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mobile Developer Flutter Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Version Control (Git)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mobile Developer Flutter Guidelines" class="md-nav__button md-logo" aria-label="Mobile Developer Flutter Guidelines" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Mobile Developer Flutter Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_DEVELOPMENT_ENVIRONMENT_SETUP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Development Env Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Version Control (Git)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3. Version Control (Git)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commit-message-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit Message Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commit Message Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do" class="md-nav__link">
+    <span class="md-ellipsis">
+      DO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont" class="md-nav__link">
+    <span class="md-ellipsis">
+      DON'T
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefer" class="md-nav__link">
+    <span class="md-ellipsis">
+      PREFER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVOID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consider" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONSIDER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-for-each-commit-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples for Each Commit Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branching-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branching Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-main-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      The main branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The main branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-main-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Main Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-develop-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Develop Branch:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-support-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Support branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Support branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-feature-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Feature Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-release-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Release Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-hotfix-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Hotfix Branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Request Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pull Request Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting a Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-example-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Request Example Template
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pull Request Example Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Workflow Overview
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_CODING_STANDARTS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Coding standarts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_DOCUMENTATION/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_TESTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7_DEPENDENCY_MANAGEMENT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Dependency Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8_SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9_PERFORMANCE_OPTIMIZATION/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_CI_CD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. CI/CD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_COLLABORATION_AND_COMMUNICATION/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Collaboration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_CODE_REVIEWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Code Reviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_PUBLISHING_GUIDELINES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Publishing Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_MAINTENANCE_AND_SUPPORT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Maintenance and Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commit-message-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit Message Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commit Message Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do" class="md-nav__link">
+    <span class="md-ellipsis">
+      DO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont" class="md-nav__link">
+    <span class="md-ellipsis">
+      DON'T
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefer" class="md-nav__link">
+    <span class="md-ellipsis">
+      PREFER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVOID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consider" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONSIDER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-for-each-commit-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples for Each Commit Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branching-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branching Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-main-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      The main branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The main branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-main-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Main Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-develop-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Develop Branch:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-support-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Support branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Support branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-feature-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Feature Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-release-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Release Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-hotfix-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Hotfix Branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Request Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pull Request Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting a Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-example-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Request Example Template
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pull Request Example Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Workflow Overview
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="3-version-control-git">3. Version Control (Git)</h1>
+<h2 id="commit-message-guidelines">Commit Message Guidelines</h2>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li>Commit messages provide valuable context and history for changes made to the codebase. Clear and descriptive commit messages help developers understand the purpose and impact of each commit.</li>
+</ul>
+<p><strong>Guidelines:</strong></p>
+<p>These guidelines outline best practices for writing git commit messages. Consistent and informative commit messages help maintain a clean and understandable version history, making it easier to track changes and collaborate effectively.</p>
+<h3 id="do">DO</h3>
+<ul>
+<li><strong>Use Imperative Mood:</strong> Write commit messages in the imperative mood.</li>
+<li><strong>Be Descriptive:</strong> Provide a clear and concise description of the changes introduced by the commit.</li>
+<li><strong>Include Issue References:</strong> If applicable, reference related issues, tasks, or feature requests in the commit message.</li>
+</ul>
+<h3 id="dont">DON'T</h3>
+<ul>
+<li><strong>Avoid Vague Messages:</strong> Refrain from using vague or ambiguous commit messages that do not provide meaningful context about the changes.</li>
+<li><strong>Don't Use Personal Pronouns:</strong> Avoid using personal pronouns like "I" or "we" in commit messages.</li>
+</ul>
+<h3 id="prefer">PREFER</h3>
+<ul>
+<li><strong>Prefix Commit Messages:</strong> Prefix commit messages with a relevant type identifier, such as "feat", "fix", "chore", etc., to categorize the type of change being made.</li>
+<li><strong>Use Conventional Commit Format:</strong> Prefer using the conventional commit format, as defined by <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a>, to structure commit messages consistently across projects.</li>
+</ul>
+<h3 id="avoid">AVOID</h3>
+<ul>
+<li><strong>Avoid Excessive Detail:</strong> Refrain from including excessive detail or technical jargon in commit messages, as it can clutter the version history.</li>
+<li><strong>Avoid Incomplete Messages:</strong> Avoid committing incomplete or work-in-progress changes without providing context or explanation.</li>
+</ul>
+<h3 id="consider">CONSIDER</h3>
+<ul>
+<li><strong>Consider Breaking Changes:</strong> If a commit introduces breaking changes, consider explicitly mentioning them in the commit message to alert other developers.</li>
+<li><strong>Consider Scope:</strong> When appropriate, include a scope identifier in the commit message to indicate the specific component or module affected by the changes.</li>
+</ul>
+<h3 id="examples-for-each-commit-type">Examples for Each Commit Type</h3>
+<p>The commit message should be structured as follows:</p>
+<pre><code>&lt;type&gt;[optional scope]: &lt;description&gt;
+
+[optional body]
+
+[optional footer(s)]
+</code></pre>
+<p>ref: <a href="https://www.conventionalcommits.org/en/v1.0.0/#summary">https://www.conventionalcommits.org/en/v1.0.0/#summary</a></p>
+<hr />
+<p><strong>feat (Feature)</strong>: Introduces a new feature or functionality to the project.</p>
+<ul>
+<li><code>feat: Add user authentication feature</code></li>
+<li><code>feat(auth): Add user authentication by google feature</code></li>
+</ul>
+<hr />
+<p><strong>fix (Bug Fix)</strong>: Addresses and resolves an issue or bug within the project.</p>
+<ul>
+<li><code>fix: Resolve issue with incorrect user permissions</code></li>
+<li><code>fix(permission): Resolve issue with incorrect user permissions</code></li>
+</ul>
+<hr />
+<p><strong>docs (Documentation)</strong>: Updates or adds documentation, such as README files, comments, or inline documentation.</p>
+<ul>
+<li><code>docs: Update README with installation instructions</code></li>
+<li><code>docs(readme): Update README with installation instructions</code></li>
+</ul>
+<hr />
+<p><strong>style (Code Style)</strong> Implements changes related to code style, formatting, or whitespace.</p>
+<ul>
+<li><code>style: Format code according to style guide</code></li>
+<li><code>style(format): Format code according to style guide</code></li>
+</ul>
+<hr />
+<p><strong>refactor (Code Refactor)</strong>: Restructures existing code without changing its external behavior.</p>
+<ul>
+<li><code>refactor: Simplify login component logic</code></li>
+<li><code>refactor(login): Simplify component logic</code></li>
+</ul>
+<hr />
+<p><strong>test (Tests)</strong>: Adds, updates, or fixes tests related to the project's codebase.</p>
+<ul>
+<li><code>test: Add unit tests for user registration</code></li>
+<li><code>test(registration): Add unit tests for user registration</code></li>
+</ul>
+<hr />
+<p><strong>chore (Chores)</strong>: Implements miscellaneous tasks or changes that do not fit into any other category.</p>
+<ul>
+<li><code>chore: Update dependencies to latest versions</code></li>
+<li><code>chore(deps): Update to latest versions</code></li>
+</ul>
+<hr />
+<p><strong>struct (Folder Structure)</strong>: Adjusts or refactors the project's folder structure for better organization and readability.</p>
+<ul>
+<li><code>struct: Reorganize project structure for improved readability</code></li>
+<li><code>struct(assets): Reorganize assets structure for improved readability</code></li>
+</ul>
+<hr />
+<p><strong>update (Updates)</strong>: Updates dependencies, libraries, or other external resources used by the project.</p>
+<ul>
+<li><code>update: Update library version to latest release</code></li>
+<li><code>update(library): Update version to latest release</code></li>
+</ul>
+<hr />
+<p><strong>enhance (Enhancements)</strong>: Enhances or improves existing functionality or performance.</p>
+<ul>
+<li><code>enhance: Improve performance of search algorithm</code></li>
+<li><code>enhance(search): Improve performance of search algorithm</code></li>
+</ul>
+<hr />
+<p><strong>revert (Reverts)</strong>: Reverts a previous commit to undo changes that caused issues or unintended consequences.</p>
+<ul>
+<li><code>revert: Revert previous commit that caused issue #123</code></li>
+<li><code>revert(issue123): Revert previous commit that caused issue #123</code></li>
+</ul>
+<h2 id="branching-strategy">Branching Strategy</h2>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li>A branching strategy defines how code changes are managed and integrated into the codebase. It helps maintain a clean history, enable parallel development, and facilitate collaboration among team members.</li>
+</ul>
+<p><strong>Guidelines:</strong></p>
+<ul>
+<li>Adopt a branching model that aligns with the project's requirements and team's workflow (e.g., GitFlow, GitHub Flow).</li>
+<li>Use feature branches for developing new features or enhancements, bugfix branches for addressing defects, and release branches for preparing stable releases.</li>
+<li>Ensure that each branch serves a clear purpose and follows naming conventions (e.g., feature/<code>name</code>, bugfix/<code>name</code>, release/<code>version</code>).</li>
+</ul>
+<h2 id="the-main-branches">The main branches</h2>
+<p>At the core, the development model is greatly inspired by existing models out there. The central repo holds two main branches with an infinite lifetime:</p>
+<ul>
+<li>main</li>
+<li>develop</li>
+</ul>
+<p>The main branch at origin should be familiar to every Git user. Parallel to the master branch, another branch exists called develop. We consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.</p>
+<p>We consider <code>origin/develop</code> to be the <code>main</code> branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”. This is where any automatic nightly builds are built from.</p>
+<p>When the source code in the <code>develop</code> branch reaches a stable point and is ready to be released, all of the changes should be merged back into master somehow and then tagged with a release number. How this is done in detail will be discussed further on.</p>
+<p>Therefore, each time when changes are merged back into main, this is a new production release by definition. We tend to be very strict at this, so that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers everytime there was a commit on <code>main</code>.</p>
+<h3 id="1-main-branch"><strong>1. Main Branch</strong></h3>
+<p><img alt="1000000564.png" src="https://nvie.com/img/main-branches@2x.png" /></p>
+<blockquote>
+<p>source: <a href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a></p>
+</blockquote>
+<p>The main branch serves as the primary line of development and reflects the production-ready state of the project. Commits directly to the main branch are typically reserved for release merges.</p>
+<ul>
+<li><strong>Propose</strong>: Use the main branch to represent the stable and production-ready state of the project.</li>
+<li><strong>Process</strong>: Merge completed release branches into the main branch to deploy new versions of the software.</li>
+<li><strong>Implementation</strong>: Merge from <code>release/v1.0</code> to <code>main</code></li>
+<li><strong>Example</strong>: After thorough testing, the latest version of the software is merged into the <strong><code>main</code></strong> branch for deployment.</li>
+</ul>
+<h3 id="2-develop-branch">2. <strong>Develop Branch:</strong></h3>
+<p>The <code>develop</code> branch facilitates integration of ongoing development work. Developers create feature branches from the <code>develop</code> branch and merge them back in upon feature completion.</p>
+<ul>
+<li><strong>Propose</strong>: Utilize the <code>develop</code> branch for ongoing development and integration of new features.</li>
+<li><strong>Process</strong>: Merge completed <code>feature</code> branches into the <code>develop</code> branch to integrate new functionality into the project.</li>
+<li><strong>Implementation</strong>: Merge from <code>feature</code> to <code>develop</code></li>
+<li><strong>Example</strong>: After implementing a new user authentication feature, the feature branch is merged back into the develop branch for further integration.</li>
+</ul>
+<h2 id="the-support-branches">The Support branches</h2>
+<h3 id="3-feature-branches"><strong>3. Feature Branches</strong></h3>
+<p>Feature branches isolate development work for new features or changes. Based on the develop branch, feature branches are created and named descriptively to reflect the feature they represent. Upon completion, they are merged back into <code>develop</code>.</p>
+<p><img alt="1000000567.jpg" src="https://nvie.com/img/merge-without-ff@2x.png" /></p>
+<blockquote>
+<p>source: <a href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a></p>
+</blockquote>
+<ul>
+<li><strong>Propose</strong>: Create feature branches to <code>develop</code> new features or implement changes separately from the main development line.</li>
+<li><strong>Process</strong>: Implement and test new features within <code>feature</code> branches, then merge them back into the <code>develop</code> branch once completed.</li>
+<li><strong>Implementation</strong>: Merge from <code>feature</code> to <code>develop</code></li>
+<li><strong>Example</strong>: A feature branch <code>add-search-functionality</code> is created from develop, developed independently, and merged back into <code>develop</code> upon completion of the search functionality.</li>
+</ul>
+<h3 id="4-release-branches">4. Release Branches</h3>
+<p>Release branches prepare the codebase for a new production release. Created to stabilize the code and perform final testing, release branches are merged into both main and <code>develop</code> upon readiness, and then deleted.</p>
+<ul>
+<li><strong>Propose</strong>: Use release branches to prepare and stabilize the codebase for new production releases.</li>
+<li><strong>Process</strong>: Merge completed release branches into both <code>main</code> and <code>develop</code> branches to deploy new versions of the software.</li>
+<li><strong>Implementation</strong>: Merge from <code>develop</code> to <code>release/v2.0.0</code></li>
+<li><strong>Example</strong>: After finalizing version <code>2.0.0</code>, the <code>release</code> branch <code>v2.0.0</code> is merged into both <code>main</code> and <code>develop</code> branches for deployment.</li>
+</ul>
+<h3 id="5-hotfix-branches">5. Hotfix Branches</h3>
+<p>Hotfix branches address critical issues or bugs in the production environment. Based on the main branch, <code>hotfix</code> branches are created for quick fixes and merged into both <code>main</code> and <code>develop</code> once complete.</p>
+<p><img alt="1000000568.png" src="https://nvie.com/img/hotfix-branches@2x.png" /></p>
+<blockquote>
+<p>source: <a href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a></p>
+</blockquote>
+<ul>
+<li><strong>Propose</strong>: Use hotfix branches to quickly address critical issues or bugs in the production environment.</li>
+<li><strong>Process</strong>: Create <code>hotfix</code> branches from the main branch, apply fixes, and merge them back into both main and develop branches for deployment.</li>
+<li><strong>Implementation</strong>: Merge from <code>hotfix/fix-security-vulnerability</code> to <code>main</code> and <code>develop</code></li>
+<li><strong>Example</strong>: A hotfix branch <code>fix-security-vulnerability</code> is created from <code>main</code> to address a critical security issue and merged into both <code>main</code> and <code>develop</code> to apply the fix.</li>
+</ul>
+<p>Reference: <a href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a></p>
+<h2 id="pull-request-guidelines">Pull Request Guidelines</h2>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li>Pull requests (PRs) facilitate code review, feedback, and collaboration among team members. Following consistent PR guidelines ensures that changes are reviewed thoroughly and integrated seamlessly into the codebase.</li>
+</ul>
+<p><strong>Guidelines:</strong></p>
+<ul>
+<li>Provide a descriptive title for the pull request that summarizes the changes introduced.</li>
+<li>Include a detailed description of the changes, rationale, and any relevant context in the PR description.</li>
+<li>Assign reviewers to the PR based on their expertise and involvement in the affected code.</li>
+<li>Address any review comments and ensure that the PR meets the project's coding standards, test coverage requirements, and acceptance criteria before merging.</li>
+</ul>
+<h3 id="submitting-a-pull-request">Submitting a Pull Request</h3>
+<ol>
+<li>
+<p><strong>Pull Latest Changes:</strong> Before submitting a pull request, pull the latest changes from the upstream repository to ensure your branch is up-to-date:</p>
+<p><code>git pull origin main</code></p>
+</li>
+<li>
+<p><strong>Push Changes:</strong> Once you're satisfied with your changes, push your branch to your forked repository:</p>
+<p><code>git push origin feature/your-feature-name</code></p>
+</li>
+<li>
+<p><strong>Create Pull Request:</strong> Go to the GitHub page of your forked repository and create a new pull request from your branch to the main branch of the upstream repository.</p>
+</li>
+<li>
+<p><strong>Pull Request Description:</strong></p>
+</li>
+<li>
+<p><strong>Overview:</strong> Provide a brief overview of the changes introduced by your pull request.</p>
+</li>
+<li><strong>Checklist:</strong> Include a checklist of tasks completed, such as testing, documentation updates, etc.</li>
+<li><strong>Related Issues:</strong> If your pull request addresses any specific issues, reference them here.</li>
+<li>
+<p><strong>Additional Notes:</strong> Any additional information or context relevant to the pull request.</p>
+</li>
+<li>
+<p><strong>Review and Address Feedback:</strong> Be responsive to any feedback or review comments provided on your pull request. Make necessary adjustments based on the feedback received.</p>
+</li>
+</ol>
+<h3 id="additional-tips">Additional Tips</h3>
+<ul>
+<li>
+<p><strong>Keep Pull Requests Small:</strong> Try to keep your pull requests focused on a single issue or feature to make the review process more manageable.</p>
+</li>
+<li>
+<p><strong>Follow Coding Guidelines:</strong> Ensure your code follows the coding style and guidelines established for the project.</p>
+</li>
+<li>
+<p><strong>Write Tests:</strong> Whenever possible, include tests for your changes to maintain code quality and prevent regressions.</p>
+</li>
+<li>
+<p><strong>Be Patient:</strong> Understand that pull requests may take time to review and merge. Be patient and respectful throughout the process.</p>
+</li>
+</ul>
+<h2 id="pull-request-example-template">Pull Request Example Template</h2>
+<h3 id="overview"><strong>Overview</strong></h3>
+<p>This pull request introduces a new feature to the project that allows users to filter search results based on location. It includes updates to the search functionality and UI components to support this feature.</p>
+<h3 id="checklist"><strong>Checklist</strong></h3>
+<ul>
+<li>[x]  Implemented search filtering by location</li>
+<li>[x]  Added UI components for location selection</li>
+<li>[x]  Updated documentation with usage instructions for the new feature</li>
+<li>[x]  Conducted thorough testing to ensure functionality and compatibility</li>
+</ul>
+<h3 id="related-issues"><strong>Related Issues</strong></h3>
+<p>Closes #123</p>
+<h3 id="additional-notes"><strong>Additional Notes</strong></h3>
+<p>This feature enhances the user experience by providing more targeted search results based on user-specified locations. It is designed to be intuitive and seamless, integrating smoothly with the existing search functionality.</p>
+<h2 id="git-workflow-overview">Git Workflow Overview</h2>
+<p>The team follows a Git workflow based on feature branching and pull requests to manage code changes efficiently. The typical workflow consists of the following steps:</p>
+<ol>
+<li>
+<p><strong>Create Feature Branch:</strong>
+Create a new feature branch from the <code>develop</code> branch to work on a specific feature or task.</p>
+</li>
+<li>
+<p><strong>Implement Changes:</strong>
+Implement the desired changes in the feature branch, following coding standards and best practices.</p>
+</li>
+<li>
+<p><strong>Submit Pull Request:</strong>
+Once the changes are complete, submit a pull request to merge the feature branch into the <code>develop</code> branch.</p>
+</li>
+<li>
+<p><strong>Code Review:</strong>
+Reviewers conduct a thorough code review of the pull request, providing feedback and suggestions for improvement.</p>
+</li>
+<li>
+<p><strong>Address Feedback:</strong>
+Address any feedback or comments raised during the code review process, making necessary revisions to the code.</p>
+</li>
+<li>
+<p><strong>Merge Pull Request:</strong>
+After receiving approval from reviewers and resolving any discussions, merge the pull request into the <code>develop</code> branch.</p>
+</li>
+<li>
+<p><strong>Release to Production:</strong>
+Periodically, create release branches from the <code>develop</code> branch to prepare release candidates for production deployment.</p>
+</li>
+</ol>
+<p>By following these version control guidelines and workflow practices, the team can collaborate effectively, maintain code quality, and ensure smooth integration of changes into the codebase.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.path", "navigation.indexes", "navigation.tracking", "navigation.top", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

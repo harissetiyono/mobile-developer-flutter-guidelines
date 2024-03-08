@@ -1,0 +1,738 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../13_PUBLISHING_GUIDELINES/">
+      
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>14. Maintenance and Support - Mobile Developer Flutter Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#14-maintenance-and-support" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mobile Developer Flutter Guidelines" class="md-header__button md-logo" aria-label="Mobile Developer Flutter Guidelines" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mobile Developer Flutter Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              14. Maintenance and Support
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mobile Developer Flutter Guidelines" class="md-nav__button md-logo" aria-label="Mobile Developer Flutter Guidelines" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Mobile Developer Flutter Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_DEVELOPMENT_ENVIRONMENT_SETUP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Development Env Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_VERSION_CONTROL_GIT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Version Control (Git)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_CODING_STANDARTS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Coding standarts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_DOCUMENTATION/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_TESTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7_DEPENDENCY_MANAGEMENT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Dependency Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8_SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9_PERFORMANCE_OPTIMIZATION/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_CI_CD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. CI/CD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_COLLABORATION_AND_COMMUNICATION/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Collaboration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_CODE_REVIEWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Code Reviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_PUBLISHING_GUIDELINES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Publishing Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    14. Maintenance and Support
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    14. Maintenance and Support
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bug-reporting-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Reporting Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotfix-deployment-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hotfix Deployment Procedures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-term-support-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-Term Support Planning
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bug-reporting-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Reporting Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotfix-deployment-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hotfix Deployment Procedures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-term-support-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-Term Support Planning
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="14-maintenance-and-support">14. Maintenance and Support</h1>
+<h2 id="bug-reporting-process">Bug Reporting Process</h2>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li>The bug reporting process defines the procedures for reporting and tracking software bugs, issues, and defects identified during development, testing, or production use. Clear and structured bug reporting facilitates timely resolution, communication, and collaboration among team members and stakeholders.</li>
+</ul>
+<p><strong>Guidelines:</strong></p>
+<ul>
+<li>Use a centralized bug tracking system or issue tracking tool, such as JIRA, GitHub Issues, or Bugzilla, to manage bug reports and track their status throughout the resolution process.</li>
+<li>Encourage team members, testers, and users to report bugs promptly by providing accessible channels for submitting bug reports, such as dedicated bug reporting forms, email addresses, or in-app feedback mechanisms.</li>
+<li>Standardize bug report formats and templates to capture essential information about each issue, including a concise summary, detailed description, steps to reproduce, expected behavior, actual behavior, and relevant environment details.</li>
+<li>Assign unique identifiers or issue numbers to each bug report for easy reference and tracking across the bug tracking system, facilitating communication and collaboration among team members.</li>
+<li>Prioritize bug reports based on severity, impact on functionality, frequency of occurrence, and business priorities, ensuring that critical issues receive immediate attention and resolution.</li>
+<li>Establish clear workflows and escalation procedures for handling bug reports, including triage, assignment to responsible individuals or teams, investigation, resolution, verification, and closure.</li>
+<li>Communicate updates and resolutions to bug reporters and stakeholders promptly, providing status updates, workarounds, and timelines for bug fixes, and closing the loop once issues are resolved satisfactorily.</li>
+</ul>
+<h2 id="hotfix-deployment-procedures">Hotfix Deployment Procedures</h2>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li>Hotfix deployment procedures outline the steps and considerations for deploying urgent fixes, patches, or updates to production environments to address critical issues, vulnerabilities, or service disruptions promptly. Effective hotfix deployment minimizes downtime, mitigates risks, and maintains service continuity for users and stakeholders.</li>
+</ul>
+<p><strong>Guidelines:</strong></p>
+<ul>
+<li>Identify and prioritize critical issues or vulnerabilities that require immediate attention and resolution, assessing their impact on system functionality, user experience, and business operations.</li>
+<li>Develop and test hotfixes in a controlled environment, such as a staging or pre-production environment, to ensure their effectiveness, compatibility, and stability before deployment to production.</li>
+<li>Coordinate hotfix deployment activities with relevant stakeholders, including development teams, operations teams, and business owners, to minimize disruptions, communicate risks, and coordinate rollback plans if necessary.</li>
+<li>Follow established change management processes and procedures for deploying hotfixes to production environments, including scheduling maintenance windows, notifying users about potential service interruptions, and implementing rollback mechanisms.</li>
+<li>Monitor the deployment process closely, monitoring key performance indicators, system metrics, and user feedback to detect and respond to any issues or anomalies promptly.</li>
+<li>Conduct post-deployment validation and testing to verify the effectiveness of hotfixes, ensure service availability, and confirm that critical issues have been addressed satisfactorily.</li>
+<li>Document hotfix deployment procedures, including pre-deployment checks, deployment steps, rollback procedures, and post-deployment validation, to facilitate future deployments and ensure consistency and repeatability.</li>
+</ul>
+<h2 id="long-term-support-planning">Long-Term Support Planning</h2>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li>Long-term support planning involves strategies and considerations for maintaining and supporting Flutter applications over extended periods, ensuring their continued functionality, relevance, and reliability throughout their lifecycle. Effective long-term support planning helps mitigate risks, address evolving requirements, and sustain user satisfaction over time.</li>
+</ul>
+<p><strong>Guidelines:</strong></p>
+<ul>
+<li>Assess the long-term support requirements and expectations for your Flutter applications, considering factors such as business goals, user needs, technological advancements, and industry trends.</li>
+<li>Develop a roadmap or plan for ongoing maintenance, updates, and enhancements to address feature requests, bug fixes, security updates, and platform changes over the application's lifecycle.</li>
+<li>Establish communication channels and support mechanisms for engaging with users, collecting feedback, and addressing inquiries, issues, or concerns related to application usage, performance, or functionality.</li>
+<li>Allocate resources, including personnel, budget, and infrastructure, to support long-term maintenance activities, such as software development, testing, deployment, monitoring, and customer support.</li>
+<li>Monitor and analyze application usage metrics, performance indicators, and user feedback regularly to identify emerging trends, patterns, and areas for improvement, informing long-term support planning and decision-making.</li>
+<li>Stay informed about relevant technologies, frameworks, and tools that impact Flutter development and maintenance, proactively adapting and evolving your long-term support strategies to leverage new opportunities and address emerging challenges.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.path", "navigation.indexes", "navigation.tracking", "navigation.top", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
