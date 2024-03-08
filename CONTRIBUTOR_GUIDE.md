@@ -19,7 +19,7 @@ Thank you for your interest in contributing to our project! Pull requests (PRs) 
 
     `git checkout -b feature/your-feature-name`
 
-    read: [git brancing strategy](./3_VERSION_CONTROL_GIT.md#branching-strategy)
+    read: [git brancing strategy](./docs/3_VERSION_CONTROL_GIT.md#branching-strategy)
 
 2. **Make Changes:** Make your desired changes to the codebase / documentation.
 
@@ -27,4 +27,4 @@ Thank you for your interest in contributing to our project! Pull requests (PRs) 
 
 4. **Keep Commits Atomic:** Commit your changes in logical, clear and descriptive.
 
-5. Make [Submit Pull Request](./3_VERSION_CONTROL_GIT.md#submitting-a-pull-request)
+5. Make [Submit Pull Request](./docs/3_VERSION_CONTROL_GIT.md#submitting-a-pull-request)
